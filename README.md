@@ -20,6 +20,7 @@ akan ada 3 branch yaitu:
 setiap orang akan fokus pada:
 
 ```
+branch feature-ml
 prediksi-kos-ml/
 ├── data/
 │   ├── raw_kos.csv         # Data mentah
@@ -32,6 +33,7 @@ prediksi-kos-ml/
 
 ```
 ```
+branch feature-ui
 prediksi-kos-ml/
 ├── app/
 │   ├── static/             # File CSS untuk desain & Logo
@@ -43,6 +45,7 @@ prediksi-kos-ml/
 
 ```
 ```
+branch feature-performance
 prediksi-kos-ml/
 ├── app/
 │   ├── database.py         # Skrip koneksi SQLAlchemy/SQLite
