@@ -1,0 +1,17 @@
+# Data Manipulation & Math
+numpy
+pandas
+
+# Machine Learning
+scikit-learn
+
+# Visualization (untuk EDA)
+matplotlib
+seaborn
+
+# Web Framework & Database
+flask
+flask-sqlalchemy
+
+# Web Server (Opsional, untuk production)
+gunicorn
