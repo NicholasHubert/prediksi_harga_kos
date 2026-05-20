@@ -1,9 +1,12 @@
 # Data Manipulation & Math
 numpy
 pandas
+pickle
+sklearn.metrics.pairwise
 
 # Machine Learning
 scikit-learn
+
 
 # Visualization (untuk EDA)
 matplotlib
@@ -15,3 +18,7 @@ flask-sqlalchemy
 
 # Web Server (Opsional, untuk production)
 gunicorn
+streamlit
+
+# Image display
+PIL 
