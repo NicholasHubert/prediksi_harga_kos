@@ -1,7 +1,5 @@
 import streamlit as st
 from PIL import Image
-import base64
-import io
 import pandas as pd
 import numpy as np
 import pickle
@@ -60,12 +58,12 @@ def merge_images_vertically(image_paths, target_width=600):
 @st.cache_resource
 def load_ml_assets():
     try:
-        with open('../models/model_kos.pkl', 'rb') as f:
+        with open('models/model_kos.pkl', 'rb') as f:
             model = pickle.load(f)
-        with open('../models/model_columns.pkl', 'rb') as f:
+        with open('models/model_columns.pkl', 'rb') as f:
             model_columns = pickle.load(f)
-        df_cleaned = pd.read_csv('../data/Data_Indekos_Jabodetabek_Mamikos_Cleaned.csv')
-        df_regression = pd.read_csv('../data/Data_Indekos_Jabodetabek_Mamikos_Regression.csv')
+        df_cleaned = pd.read_csv('data/Data_Indekos_Jabodetabek_Mamikos_Cleaned.csv')
+        df_regression = pd.read_csv('data/Data_Indekos_Jabodetabek_Mamikos_Regression.csv')
         return model, model_columns, df_cleaned, df_regression
     except Exception as e:
         st.error(f"Error loading ML assets: {str(e)}")
@@ -354,7 +352,7 @@ if st.session_state.page == 1:
     with right_col:
         try:
             # List path gambar Anda
-            list_gambar = ["../src/image1.jpg", "../src/image2.jpg", "../src/image3.png"]
+            list_gambar = ["src/image1.jpg", "src/image2.jpg", "src/image3.png"]
             
             # Gabungkan menjadi 1 gambar
             final_image = merge_images_vertically(list_gambar, target_width=800)
