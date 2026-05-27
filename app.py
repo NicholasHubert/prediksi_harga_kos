@@ -444,7 +444,7 @@ elif st.session_state.page == 2:
             display: flex !important; 
             flex-direction: column !important; 
             width: 100% !important;
-            min-height: 200px !important;
+            min-height: 210px !important;
             height: auto !important;
             flex: 0 0 auto !important;
             overflow-y: auto !important;
