@@ -283,54 +283,54 @@ if st.session_state.page == 1:
             st.markdown("<div class='section-title'>Fasilitas Kamar</div>", unsafe_allow_html=True)
             fk_col1, fk_col2, fk_col3 = st.columns(3)
             with fk_col1:
-                inputs['fac_ac'] = st.checkbox("❄️ AC")
-                inputs['is_electricity'] = st.checkbox("⚡ Termasuk Listrik")
+                inputs['fac_ac'] = st.checkbox("AC")
+                inputs['is_electricity'] = st.checkbox("Termasuk Listrik")
             with fk_col2:
-                inputs['fac_wifi'] = st.checkbox("📶 WiFi", value=True)
-                inputs['fac_guling'] = st.checkbox("💤 Guling")
+                inputs['fac_wifi'] = st.checkbox("WiFi")
+                inputs['fac_guling'] = st.checkbox("Guling")
             with fk_col3:
-                inputs['fac_bantal'] = st.checkbox("🛏️ Bantal")
+                inputs['fac_bantal'] = st.checkbox("Bantal")
 
             st.markdown("<div class='section-title'>Furnitur Kamar</div>", unsafe_allow_html=True)
             fur_col1, fur_col2, fur_col3 = st.columns(3)
             with fur_col1:
-                inputs['fac_kipas_angin'] = st.checkbox("🌀 Kipas Angin")
-                inputs['fac_kursi'] = st.checkbox("🪑 Kursi")
+                inputs['fac_kipas_angin'] = st.checkbox("Kipas Angin")
+                inputs['fac_kursi'] = st.checkbox("Kursi")
             with fur_col2:
-                inputs['fac_tv'] = st.checkbox("📺 TV")
-                inputs['is_full_furnished'] = st.checkbox("🛋️ Full Furnish")
+                inputs['fac_tv'] = st.checkbox("TV")
+                inputs['is_full_furnished'] = st.checkbox("Full Furnish")
             with fur_col3:
-                inputs['fac_cermin'] = st.checkbox("🪞 Cermin")
+                inputs['fac_cermin'] = st.checkbox("Cermin")
 
             st.markdown("<div class='section-title'>Kamar Mandi</div>", unsafe_allow_html=True)
             km_col1, km_col2, km_col3 = st.columns(3)
             with km_col1:
-                inputs['is_kamar_mandi_dalam'] = st.checkbox("🚿 K. Mandi Dalam")
-                inputs['fac_wastafel'] = st.checkbox("🚰 Wastafel")
-                inputs['fac_bak_mandi'] = st.checkbox("🛁 Bak Mandi")
+                inputs['is_kamar_mandi_dalam'] = st.checkbox("K. Mandi Dalam")
+                inputs['fac_wastafel'] = st.checkbox("Wastafel")
+                inputs['fac_bak_mandi'] = st.checkbox("Bak Mandi")
             with km_col2:
-                inputs['fac_ember_mandi'] = st.checkbox("🪣 Ember Mandi")
-                inputs['fac_air_panas'] = st.checkbox("♨️ Air Panas")
+                inputs['fac_ember_mandi'] = st.checkbox("Ember Mandi")
+                inputs['fac_air_panas'] = st.checkbox("Air Panas")
             with km_col3:
-                inputs['fac_shower'] = st.checkbox("🚿 Shower")
-                inputs['is_kloset_duduk'] = st.checkbox("🚽 Kloset Duduk")
+                inputs['fac_shower'] = st.checkbox("Shower")
+                inputs['is_kloset_duduk'] = st.checkbox("Kloset Duduk")
 
             st.markdown("<div class='section-title'>Fasilitas Umum & Lainnya</div>", unsafe_allow_html=True)
             fb_col1, fb_col2, fb_col3 = st.columns(3)
             with fb_col1:
-                inputs['fac_keamanan'] = st.checkbox("🛡️ Keamanan / CCTV")
-                inputs['fac_sirkulasi_udara'] = st.checkbox("💨 Sirkulasi Udara")
-                inputs['fac_parkir_motor'] = st.checkbox("🏍️ Parkir Motor")
-                inputs['fac_parkir_mobil'] = st.checkbox("🚗 Parkir Mobil")
+                inputs['fac_keamanan'] = st.checkbox("Keamanan / CCTV")
+                inputs['fac_sirkulasi_udara'] = st.checkbox("Sirkulasi Udara")
+                inputs['fac_parkir_motor'] = st.checkbox("Parkir Motor")
+                inputs['fac_parkir_mobil'] = st.checkbox("Parkir Mobil")
             with fb_col2:
-                inputs['fac_ruang_bersama'] = st.checkbox("🛋️ Ruang Bersama")
-                inputs['fac_dispenser'] = st.checkbox("💧 Dispenser")
-                inputs['fac_dapur'] = st.checkbox("🍳 Dapur Bersama")
-                inputs['fac_layanan_kebersihan'] = st.checkbox("🧹 Layanan Kebersihan")
+                inputs['fac_ruang_bersama'] = st.checkbox("Ruang Bersama")
+                inputs['fac_dispenser'] = st.checkbox("Dispenser")
+                inputs['fac_dapur'] = st.checkbox("Dapur Bersama")
+                inputs['fac_layanan_kebersihan'] = st.checkbox("Layanan Kebersihan")
             with fb_col3:
-                inputs['fac_kulkas'] = st.checkbox("🧊 Kulkas Bersama")
-                inputs['fac_area_jemur'] = st.checkbox("☀️ Area Jemur")
-                inputs['fac_mesin_cuci'] = st.checkbox("🧺 Mesin Cuci")
+                inputs['fac_kulkas'] = st.checkbox("Kulkas Bersama")
+                inputs['fac_area_jemur'] = st.checkbox("Area Jemur")
+                inputs['fac_mesin_cuci'] = st.checkbox("Mesin Cuci")
 
             st.markdown("<br>", unsafe_allow_html=True) 
             
@@ -411,13 +411,70 @@ elif st.session_state.page == 2:
             margin: 0 auto !important; 
         }
         
-        .rekomendasi-card { background-color: white; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 20px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); height: 100%; }
-        .rekomendasi-card:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-        .rek-title { font-weight: 800; font-size: 17px; color: #0f172a; margin-bottom: 5px; }
-        .rek-loc { font-size: 13px; color: #64748b; margin-bottom: 20px; display: flex; align-items: center; }
-        .rek-divider { border-top: 1px dashed #cbd5e1; margin: 15px 0; }
-        .rek-price-label { font-size: 11px; color: #64748b; text-transform: uppercase; font-weight: 600;}
-        .rek-price-value { font-weight: 800; font-size: 18px; color: #0f172a; text-align: right; }
+        /* Make columns flex containers untuk equal card heights */
+        [data-testid="stColumn"] {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+        }
+        
+        /* Target parent row container */
+        [data-testid="stHorizontalBlock"] {
+            display: flex !important;
+            align-items: flex-start !important;
+            gap: 1rem !important;
+        }
+        
+        /* Ensure markdown containers stretch width */
+        [data-testid="stColumn"] > div {
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important;
+        }
+        
+        /* ========== CARD HEIGHT CONTROL ========== */
+        .rekomendasi-card { 
+            background-color: white !important; 
+            padding: 25px !important; 
+            border-radius: 12px !important; 
+            border: 1px solid #e2e8f0 !important; 
+            margin-bottom: 20px !important; 
+            transition: transform 0.2s, box-shadow 0.2s !important; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important; 
+            display: flex !important; 
+            flex-direction: column !important; 
+            width: 100% !important;
+            min-height: 200px !important;
+            height: auto !important;
+            flex: 0 0 auto !important;
+            overflow-y: auto !important;
+        }
+        /* ========== END CARD HEIGHT CONTROL ========== */
+        .rekomendasi-card:hover { transform: translateY(-3px) !important; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important; }
+        
+        .rek-title { 
+            font-weight: 800 !important; 
+            font-size: 17px !important; 
+            color: #0f172a !important; 
+            margin-bottom: 12px !important; 
+            line-height: 1.3 !important; 
+            flex: 1 0 auto !important;
+        }
+        
+        .rek-loc { 
+            font-size: 13px !important; 
+            color: #64748b !important; 
+            margin-bottom: 0 !important; 
+            display: flex !important; 
+            align-items: center !important; 
+        }
+        .rek-divider { 
+            border-top: 1px dashed #cbd5e1 !important; 
+            margin: 8px 0 12px 0 !important; 
+            flex-shrink: 0 !important; 
+        }
+        .rek-price-label { font-size: 11px !important; color: #64748b !important; text-transform: uppercase !important; font-weight: 600 !important;}
+        .rek-price-value { font-weight: 800 !important; font-size: 18px !important; color: #0f172a !important; text-align: right !important; }
         </style>
     """, unsafe_allow_html=True)
 
@@ -561,11 +618,7 @@ elif st.session_state.page == 2:
     """, unsafe_allow_html=True)
 
     # --- TOP 5 REKOMENDASI LISTING ---
-    col_rek1, col_rek2 = st.columns([4, 1])
-    with col_rek1:
-        st.markdown("<h4 style='color: #0f172a; font-weight: 800; font-size: 18px; margin-bottom: 20px;'>Top Rekomendasi Untukmu</h4>", unsafe_allow_html=True)
-    with col_rek2:
-        st.markdown("<div style='text-align: right; margin-top: 5px;'><a href='#' style='color: #f59e0b; text-decoration: none; font-weight: 700; font-size: 13px;'>Lihat Peta 🗺️</a></div>", unsafe_allow_html=True)
+    st.markdown("<h4 style='color: #0f172a; font-weight: 800; font-size: 18px; margin-bottom: 20px;'>Top Rekomendasi Untukmu</h4>", unsafe_allow_html=True)
 
     cols1 = st.columns(3)
     for i in range(min(3, len(top_5_recs))):
@@ -577,7 +630,7 @@ elif st.session_state.page == 2:
                         <span style="color: #94a3b8; font-size: 14px; margin-right: 6px;">📍</span>{top_5_recs[i]['lokasi']}
                     </div>
                     <div class="rek-divider"></div>
-                    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 15px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: auto;">
                         <span class="rek-price-label">Harga Aktual</span>
                         <span class="rek-price-value">{top_5_recs[i]['harga']}</span>
                     </div>
@@ -596,7 +649,7 @@ elif st.session_state.page == 2:
                         <span style="color: #94a3b8; font-size: 14px; margin-right: 6px;">📍</span>{top_5_recs[i]['lokasi']}
                     </div>
                     <div class="rek-divider"></div>
-                    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 15px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: auto;">
                         <span class="rek-price-label">Harga Aktual</span>
                         <span class="rek-price-value">{top_5_recs[i]['harga']}</span>
                     </div>
