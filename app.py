@@ -283,54 +283,54 @@ if st.session_state.page == 1:
             st.markdown("<div class='section-title'>Fasilitas Kamar</div>", unsafe_allow_html=True)
             fk_col1, fk_col2, fk_col3 = st.columns(3)
             with fk_col1:
-                inputs['fac_ac'] = st.checkbox("❄️ AC")
-                inputs['is_electricity'] = st.checkbox("⚡ Termasuk Listrik")
+                inputs['fac_ac'] = st.checkbox("AC")
+                inputs['is_electricity'] = st.checkbox("Termasuk Listrik")
             with fk_col2:
-                inputs['fac_wifi'] = st.checkbox("📶 WiFi", value=True)
-                inputs['fac_guling'] = st.checkbox("💤 Guling")
+                inputs['fac_wifi'] = st.checkbox("WiFi")
+                inputs['fac_guling'] = st.checkbox("Guling")
             with fk_col3:
-                inputs['fac_bantal'] = st.checkbox("🛏️ Bantal")
+                inputs['fac_bantal'] = st.checkbox("Bantal")
 
             st.markdown("<div class='section-title'>Furnitur Kamar</div>", unsafe_allow_html=True)
             fur_col1, fur_col2, fur_col3 = st.columns(3)
             with fur_col1:
-                inputs['fac_kipas_angin'] = st.checkbox("🌀 Kipas Angin")
-                inputs['fac_kursi'] = st.checkbox("🪑 Kursi")
+                inputs['fac_kipas_angin'] = st.checkbox("Kipas Angin")
+                inputs['fac_kursi'] = st.checkbox("Kursi")
             with fur_col2:
-                inputs['fac_tv'] = st.checkbox("📺 TV")
-                inputs['is_full_furnished'] = st.checkbox("🛋️ Full Furnish")
+                inputs['fac_tv'] = st.checkbox("TV")
+                inputs['is_full_furnished'] = st.checkbox("Full Furnish")
             with fur_col3:
-                inputs['fac_cermin'] = st.checkbox("🪞 Cermin")
+                inputs['fac_cermin'] = st.checkbox("Cermin")
 
             st.markdown("<div class='section-title'>Kamar Mandi</div>", unsafe_allow_html=True)
             km_col1, km_col2, km_col3 = st.columns(3)
             with km_col1:
-                inputs['is_kamar_mandi_dalam'] = st.checkbox("🚿 K. Mandi Dalam")
-                inputs['fac_wastafel'] = st.checkbox("🚰 Wastafel")
-                inputs['fac_bak_mandi'] = st.checkbox("🛁 Bak Mandi")
+                inputs['is_kamar_mandi_dalam'] = st.checkbox("K. Mandi Dalam")
+                inputs['fac_wastafel'] = st.checkbox("Wastafel")
+                inputs['fac_bak_mandi'] = st.checkbox("Bak Mandi")
             with km_col2:
-                inputs['fac_ember_mandi'] = st.checkbox("🪣 Ember Mandi")
-                inputs['fac_air_panas'] = st.checkbox("♨️ Air Panas")
+                inputs['fac_ember_mandi'] = st.checkbox(" Ember Mandi")
+                inputs['fac_air_panas'] = st.checkbox(" Air Panas")
             with km_col3:
-                inputs['fac_shower'] = st.checkbox("🚿 Shower")
-                inputs['is_kloset_duduk'] = st.checkbox("🚽 Kloset Duduk")
+                inputs['fac_shower'] = st.checkbox(" Shower")
+                inputs['is_kloset_duduk'] = st.checkbox(" Kloset Duduk")
 
             st.markdown("<div class='section-title'>Fasilitas Umum & Lainnya</div>", unsafe_allow_html=True)
             fb_col1, fb_col2, fb_col3 = st.columns(3)
             with fb_col1:
-                inputs['fac_keamanan'] = st.checkbox("🛡️ Keamanan / CCTV")
-                inputs['fac_sirkulasi_udara'] = st.checkbox("💨 Sirkulasi Udara")
-                inputs['fac_parkir_motor'] = st.checkbox("🏍️ Parkir Motor")
-                inputs['fac_parkir_mobil'] = st.checkbox("🚗 Parkir Mobil")
+                inputs['fac_keamanan'] = st.checkbox("Keamanan / CCTV")
+                inputs['fac_sirkulasi_udara'] = st.checkbox("Sirkulasi Udara")
+                inputs['fac_parkir_motor'] = st.checkbox("Parkir Motor")
+                inputs['fac_parkir_mobil'] = st.checkbox("Parkir Mobil")
             with fb_col2:
-                inputs['fac_ruang_bersama'] = st.checkbox("🛋️ Ruang Bersama")
-                inputs['fac_dispenser'] = st.checkbox("💧 Dispenser")
-                inputs['fac_dapur'] = st.checkbox("🍳 Dapur Bersama")
-                inputs['fac_layanan_kebersihan'] = st.checkbox("🧹 Layanan Kebersihan")
+                inputs['fac_ruang_bersama'] = st.checkbox("Ruang Bersama")
+                inputs['fac_dispenser'] = st.checkbox("Dispenser")
+                inputs['fac_dapur'] = st.checkbox("Dapur Bersama")
+                inputs['fac_layanan_kebersihan'] = st.checkbox("Layanan Kebersihan")
             with fb_col3:
-                inputs['fac_kulkas'] = st.checkbox("🧊 Kulkas Bersama")
-                inputs['fac_area_jemur'] = st.checkbox("☀️ Area Jemur")
-                inputs['fac_mesin_cuci'] = st.checkbox("🧺 Mesin Cuci")
+                inputs['fac_kulkas'] = st.checkbox("Kulkas Bersama")
+                inputs['fac_area_jemur'] = st.checkbox("Area Jemur")
+                inputs['fac_mesin_cuci'] = st.checkbox("Mesin Cuci")
 
             st.markdown("<br>", unsafe_allow_html=True) 
             
@@ -340,7 +340,7 @@ if st.session_state.page == 1:
                 
             if submitted:
                 if lokasi == "Pilih Wilayah di Jakarta":
-                    st.error("⚠️ Silakan pilih Lokasi / Area terlebih dahulu.")
+                    st.error("Silakan pilih Lokasi / Area terlebih dahulu.")
                 else:
                     st.session_state.lokasi = lokasi
                     st.session_state.luas_kamar = luas_kamar
