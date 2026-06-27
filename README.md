@@ -18,7 +18,7 @@
 | **Linear Regression (Baseline)** | 0.7085 | Rp 294.007 | Rp 175.013.337.810 | Rp 418.346 |
 | **Random Forest Regressor (Chosen)** | **0.8105** | **Rp 240.958** | **Rp 148.889.345.611** | **Rp 385.862** |
 
-[cite_start]*Catatan: Nilai $R^2$ Score dihitung pada skala logaritma (Log Transformation Target) demi menstabilkan varians, sedangkan MAE dan RMSE telah dikembalikan menggunakan fungsi eksponensial ke dalam satuan Rupiah asli agar mudah diinterpretasikan oleh pengguna*
+*Catatan: Nilai $R^2$ Score dihitung pada skala logaritma (Log Transformation Target) demi menstabilkan varians, sedangkan MAE dan RMSE telah dikembalikan menggunakan fungsi eksponensial ke dalam satuan Rupiah asli agar mudah diinterpretasikan oleh pengguna*
 
 ---
 
@@ -140,14 +140,14 @@ Pengujian dilakukan terhadap 5 responden pengguna mahasiswa menggunakan skenario
 
 ## Limitations
 
-### [High] Ketiadaan Faktor Eksternal Penentu Properti
+### Ketiadaan Faktor Eksternal Penentu Properti
 
 Model estimasi saat ini murni hanya membaca data spesifikasi fisik komponen internal bangunan kos (fasilitas, wilayah administrasi, ukuran kamar). Model belum mampu mengintegrasikan variabel eksternal krusial di dunia nyata seperti jarak radius menuju stasiun KRL/halte TransJakarta terdekat, kedekatan dengan area kampus, atau status kerawanan wilayah terhadap banjir.
 
-### [Medium] Gap Nilai RMSE (Efek Outlier Properti)
+### Gap Nilai RMSE (Efek Outlier Properti)
 
 Meskipun nilai kesalahan rata-rata linear (MAE) sudah sangat rendah , nilai RMSE model masih menyentuh angka Rp 388.647. Hal ini mengindikasikan adanya efek penalti dari sisa data pencilan (*outliers*) properti sewa tipe mewah yang harganya melonjak drastis akibat faktor eksklusivitas kualitatif lingkungan yang fiturnya belum terekam dalam bentuk teks terstruktur di dataset.
 
-### [Low] Sistem Bersifat Read-Only
+### Sistem Bersifat Read-Only
 
 Berdasarkan keluhan umpan balik pengguna pada pengujian kualitatif, aplikasi KosIn saat ini masih terbatas sebagai instrumen edukasi transparansi harga anggaran sewa (*read-only*). Sistem belum menyediakan integrasi database atau API komunikasi dua arah yang dapat menghubungkan penyewa secara instan dengan kontak personal pemilik kos asli.
