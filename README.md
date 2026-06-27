@@ -41,20 +41,16 @@ Dataset yang digunakan dalam proyek ini bersifat *open-source* yang diperoleh me
 
 ### EDA & Preprocessing Insight
 
-* 
-**Filter Wilayah Geografis:** Data mentah mencakup area Jabodetabek , namun direduksi khusus untuk wilayah DKI Jakarta (menjadi 1.233 baris) karena dinamika harga di pusat kota jauh lebih fluktuatif.
+* **Filter Wilayah Geografis:** Data mentah mencakup area Jabodetabek , namun direduksi khusus untuk wilayah DKI Jakarta (menjadi 1.233 baris) karena dinamika harga di pusat kota jauh lebih fluktuatif.
 
 
-* 
-**Disparitas Wilayah:** Berdasarkan analisis geografi, Jakarta Selatan menempati rata-rata harga kos tertinggi (Rp 2.337.112), sedangkan Jakarta Timur menjadi opsi yang paling terjangkau (Rp 1.549.845).
+* **Disparitas Wilayah:** Berdasarkan analisis geografi, Jakarta Selatan menempati rata-rata harga kos tertinggi (Rp 2.337.112), sedangkan Jakarta Timur menjadi opsi yang paling terjangkau (Rp 1.549.845).
 
 
-* 
-**Korelasi Fasilitas Pokok:** Berdasarkan visualisasi matriks korelasi (*heatmap*), ketersediaan fasilitas premium seperti `fac_air_panas` (water heater) dan `fac_tv` memiliki hubungan positif paling kuat terhadap kenaikan harga sewa.
+* **Korelasi Fasilitas Pokok:** Berdasarkan visualisasi matriks korelasi (*heatmap*), ketersediaan fasilitas premium seperti `fac_air_panas` (water heater) dan `fac_tv` memiliki hubungan positif paling kuat terhadap kenaikan harga sewa.
 
 
-* 
-**Log Transformation Target:** Kolom harga asli (`price`) dibersihkan dari komponen string teks simbol mata uang, lalu ditransformasikan ke dalam nilai logaritma untuk mengatasi masalah sebaran data pencilan ekstrem (*right-skewed*).
+* **Log Transformation Target:** Kolom harga asli (`price`) dibersihkan dari komponen string teks simbol mata uang, lalu ditransformasikan ke dalam nilai logaritma untuk mengatasi masalah sebaran data pencilan ekstrem (*right-skewed*).
 
 
 
@@ -62,8 +58,7 @@ Dataset yang digunakan dalam proyek ini bersifat *open-source* yang diperoleh me
 
 Data akhir memiliki total 1.233 baris dengan kombinasi fitur utama sebagai berikut:
 
-* 
-**Geografis & Deskriptif:** `region` (Kota administrasi), `room_area` (Luas kamar dalam $m^2$), `tipe_kos` (Campur, Putra, Putri).
+* **Geografis & Deskriptif:** `region` (Kota administrasi), `room_area` (Luas kamar dalam $m^2$), `tipe_kos` (Campur, Putra, Putri).
 
 
 * **Fasilitas Bundling (Hasil Preprocessing):**
@@ -74,8 +69,7 @@ Data akhir memiliki total 1.233 baris dengan kombinasi fitur utama sebagai berik
 * `fac_layanan_kebersihan` & `fac_area_jemur` (Komponen efisiensi kebersihan cuci-jemur).
 
 
-* 
-**Fasilitas Populer Individu (> 50 kos):** `fac_ac`, `fac_wifi`, `fac_tv`, `fac_air_panas`, `fac_kulkas`, `is_electricity` (Status biaya listrik biner), dan `is_discount` (Logika matematis potongan harga).
+* **Fasilitas Populer Individu (> 50 kos):** `fac_ac`, `fac_wifi`, `fac_tv`, `fac_air_panas`, `fac_kulkas`, `is_electricity` (Status biaya listrik biner), dan `is_discount` (Logika matematis potongan harga).
 
 
 
@@ -83,12 +77,10 @@ Data akhir memiliki total 1.233 baris dengan kombinasi fitur utama sebagai berik
 
 Pembagian data menggunakan strategi *Train-Test Split* acak dengan parameter proporsi seimbang:
 
-* 
-**Data Train (80%):** 986 baris 
+* **Data Train (80%):** 986 baris 
 
 
-* 
-**Data Test (20%):** 247 baris 
+* **Data Test (20%):** 247 baris 
 
 
 
@@ -125,27 +117,22 @@ Aplikasi ini didesain menggunakan **Streamlit Architecture**, di mana komponen *
 
 Pengujian dilakukan terhadap 5 responden pengguna mahasiswa menggunakan skenario pencarian langsung (*Usage Scenario*):
 
-* 
-**Input Parameters:** Pengguna memasukkan kriteria berupa lokasi lewat *dropdown*, luas kamar lewat komponen *slider*, tipe kos menggunakan *radio button*, dan mencentang fasilitas lewat *checkbox*.
+* **Input Parameters:** Pengguna memasukkan kriteria berupa lokasi lewat *dropdown*, luas kamar lewat komponen *slider*, tipe kos menggunakan *radio button*, dan mencentang fasilitas lewat *checkbox*.
 
 
-* 
-**Output Screen:** Aplikasi mengembalikan nominal estimasi harga ideal per bulan dan memunculkan komponen daftar Top 5 Rekomendasi Kos yang paling mendekati kriteria kueri input.
+* **Output Screen:** Aplikasi mengembalikan nominal estimasi harga ideal per bulan dan memunculkan komponen daftar Top 5 Rekomendasi Kos yang paling mendekati kriteria kueri input.
 
 
 
 ### Results (Feedback)
 
-* 
-**Usability (100% Puas):** Seluruh responden memberikan nilai kepuasan tertinggi (skala 4/4) untuk aspek kerapian tata letak menu dan kemudahan alur pemakaian aplikasi Streamlit.
+* **Usability (100% Puas):** Seluruh responden memberikan nilai kepuasan tertinggi (skala 4/4) untuk aspek kerapian tata letak menu dan kemudahan alur pemakaian aplikasi Streamlit.
 
 
-* 
-**Usefulness:** Informasi tebakan harga dinilai sangat masuk akal dan relevan dengan realita pasar kos Jakarta karena tingkat kesalahan rata-rata model (MAE) berada di bawah batas toleransi anggaran psikologis penyewa (< Rp 250.000).
+* **Usefulness:** Informasi tebakan harga dinilai sangat masuk akal dan relevan dengan realita pasar kos Jakarta karena tingkat kesalahan rata-rata model (MAE) berada di bawah batas toleransi anggaran psikologis penyewa (< Rp 250.000).
 
 
-* 
-**Latency:** Proses kalkulasi komputasi dari penekanan tombol prediksi hingga memunculkan hasil output dirasakan berjalan sangat cepat (di bawah 1 detik).
+* **Latency:** Proses kalkulasi komputasi dari penekanan tombol prediksi hingga memunculkan hasil output dirasakan berjalan sangat cepat (di bawah 1 detik).
 
 
 
