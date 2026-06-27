@@ -1,0 +1,23 @@
+artifact_path: file:d:/tugas/codes/Machine Learning/AoL Machine Learning/prediksi_harga_kos/tugas_mlflow/mlruns/1/models/m-e182cd27f5df431cbd03a7ff9611b47a/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.5.1
+    skops_trusted_types: null
+mlflow_version: 3.14.0
+model_id: m-e182cd27f5df431cbd03a7ff9611b47a
+model_size_bytes: 14131306
+model_uuid: m-e182cd27f5df431cbd03a7ff9611b47a
+prompts: null
+run_id: 3a3e56866b734b3d94987cdb60144622
+utc_time_created: '2026-06-27 15:26:35.177819'
