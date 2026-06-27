@@ -1,4 +1,4 @@
-```
+
 # KosIn: Jabodetabek Boarding Room Price Predictor
 
 > Mengestimasi harga sewa kamar kos ideal di wilayah DKI Jakarta menggunakan algoritma Machine Learning berbasis spesifikasi properti, kebijakan sewa, dan kelengkapan fasilitas.
@@ -151,7 +151,3 @@ Meskipun nilai kesalahan rata-rata linear (MAE) sudah sangat rendah , nilai RMSE
 ### [Low] Sistem Bersifat Read-Only
 
 Berdasarkan keluhan umpan balik pengguna pada pengujian kualitatif, aplikasi KosIn saat ini masih terbatas sebagai instrumen edukasi transparansi harga anggaran sewa (*read-only*). Sistem belum menyediakan integrasi database atau API komunikasi dua arah yang dapat menghubungkan penyewa secara instan dengan kontak personal pemilik kos asli.
-
-```
-
-```
