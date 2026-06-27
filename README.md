@@ -1,4 +1,4 @@
-```markdown
+```
 # KosIn: Jabodetabek Boarding Room Price Predictor
 
 > Mengestimasi harga sewa kamar kos ideal di wilayah DKI Jakarta menggunakan algoritma Machine Learning berbasis spesifikasi properti, kebijakan sewa, dan kelengkapan fasilitas.
